@@ -1,8 +1,4 @@
 #include "RF24.h"
-
-
-
-#define OLED_RESET 4
 RF24 radio(9,10);
 const uint64_t PIPE_COMANDO = 0xE8E8F0F0E1LL;
 const uint64_t PIPE_RESPOSTA = 0xE8E8F0F0E2LL;
