@@ -1,8 +1,4 @@
 #include "RF24.h"
-
-
-
-#define OLED_RESET 4
 RF24 radio(9,10);
 const uint64_t PIPE_COMANDO = 0xE8E8F0F0E1LL;
 const uint64_t PIPE_RESPOSTA = 0xE8E8F0F0E2LL;
@@ -68,23 +64,10 @@ void verificaPacotesRF(){
 
 void setup() {
   Serial.begin(9600);
-//  display.begin(SSD1306_SWITCHCAPVCC, 0x3C);  // initialize with the I2C addr 0x3C (for the 128x32)
-  // init done
-  
-  // Show image buffer on the display hardware.
-  // Since the buffer is intialized with an Adafruit splashscreen
-  // internally, this will display the splashscreen.
-//  display.display();
-
-  
   inicializaTransmissorRF();
-
-
-
 }
 
 void loop() {
   verificaPacotesRF();
-  // put your main code here, to run repeatedly:
-
+  delay(1000);
 }
