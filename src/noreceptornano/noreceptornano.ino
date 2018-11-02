@@ -68,23 +68,10 @@ void verificaPacotesRF(){
 
 void setup() {
   Serial.begin(9600);
-//  display.begin(SSD1306_SWITCHCAPVCC, 0x3C);  // initialize with the I2C addr 0x3C (for the 128x32)
-  // init done
-  
-  // Show image buffer on the display hardware.
-  // Since the buffer is intialized with an Adafruit splashscreen
-  // internally, this will display the splashscreen.
-//  display.display();
-
-  
   inicializaTransmissorRF();
-
-
-
 }
 
 void loop() {
   verificaPacotesRF();
-  // put your main code here, to run repeatedly:
-
+  delay(1000);
 }
